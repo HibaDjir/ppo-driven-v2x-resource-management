@@ -4,7 +4,7 @@ Code for the paper **"A PPO-based Adaptive Inter-Slice Resource Sharing Mechanis
 
 A single PPO agent decides how much bandwidth each network slice should lend to overloaded high-priority slices in a multi-cell V2X scenario. Lagrange multipliers protect the lending slices, and a multi-pass admission controller in ns-3 always serves handover (HO) flows before new calls (NC).
 
-> The full method, experiments and discussion are in the paper: [`docs/paper.pdf`](docs/paper.pdf)
+
 
 ---
 
@@ -145,17 +145,4 @@ MLP 256-256-128 for actor and critic, learning rates 1e-4 / 3e-4, γ = 0.99, GAE
 - **`./ns3: No such file or directory`**: run ns-3 commands from the `ns-3.40/` folder.
 - **Port already in use**: kill the stale `ns3.40-gnb_scheduler-default` process or change `--port`.
 
-## Citation
 
-```bibtex
-@article{bendaoud2025ppo,
-  title   = {A PPO-based Adaptive Inter-Slice Resource Sharing Mechanism for 5G V2X Network Slicing},
-  author  = {Bendaoud, Fayssal and Djiroun, Hiba and Abdennebi, Marwen},
-  year    = {2025},
-  note    = {Manuscript}
-}
-```
-
-## License
-
-Add your license here.
