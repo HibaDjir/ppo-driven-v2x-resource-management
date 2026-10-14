@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodes>
+    <node id="j0" x="0"    y="0" type="priority"/>
+    <node id="j1" x="1000" y="0" type="priority"/>
+    <node id="j2" x="2000" y="0" type="priority"/>
+    <node id="j3" x="3000" y="0" type="priority"/>
+</nodes>

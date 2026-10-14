@@ -1,0 +1,35 @@
+# ── Python ──────────────────────────────
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# ── Editor / OS ─────────────────────────
+.vscode/
+.idea/
+.DS_Store
+
+# ── ns3-gym (separate repo: clone it yourself, see README) ──
+ns3-gym/
+
+# ── Generated simulation data (very large) ──
+bridge/tick_reports_live/
+bridge/tick_reports/
+bridge/ns3_logs/
+ns3_logs/
+routes_lam*.rou.xml
+*.rou.alt.xml
+sumo/**/*.log
+sumo/**/output*/
+
+# ── Logs ────────────────────────────────
+*.log
+
+# ── Training outputs ────────────────────
+Results/
+*.pt
+*.pth
+
+# ── Keep these even if a pattern above matches ──
+!requirements.txt

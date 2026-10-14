@@ -1,0 +1,17 @@
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+               xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="v2x_network.net.xml"/>
+        <route-files value="routes_lam55.rou.xml"/>
+        <additional-files value="vehicle_types.add.xml"/>
+    </input>
+
+    <time>
+        <step-length value="1.0"/>
+        <begin value="0"/>
+    </time>
+
+   
+
+</configuration>

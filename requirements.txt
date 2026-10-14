@@ -1,0 +1,21 @@
+# V2X SUMO + NS3 + PPO v41
+# ─────────────────────────
+# Core deep-learning
+torch>=2.0.0
+numpy>=1.24.0
+
+# SUMO TraCI (install alongside SUMO ≥ 1.18)
+# On Ubuntu:  sudo apt install sumo sumo-tools sumo-doc
+# TraCI Python package comes with sumo-tools;
+# alternatively: pip install traci
+traci>=1.18.0
+
+# Plotting (paper figures)
+matplotlib>=3.7.0
+
+# NS3-gym (only needed for real NS3 mode, not STUB mode)
+# Install from: https://github.com/tkn-tub/ns3-gym
+# ns3gym>=0.3.0
+
+# Optional but recommended
+tqdm>=4.65.0

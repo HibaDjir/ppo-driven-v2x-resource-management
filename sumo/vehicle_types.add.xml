@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Vehicle type definitions.
+    PPO flow type     →  SUMO vType id    is_ho   slice(s)   BW demand
+    HO_video          →  vt_ho_video      True    0,1        0.0180
+    HO_data           →  vt_ho_data       True    1          0.0120
+    NC_video          →  vt_nc_video      False   0,1        0.0150
+    NC_voip           →  vt_nc_voip       False   1,2        0.0060
+    NC_best_effort    →  vt_nc_be         False   2,3        0.0040
+-->
+<additional>
+
+    <!-- Handover-eligible vehicles (is_ho = True) -->
+
+    <vType id="vt_ho_video"
+           accel="2.6" decel="4.5" sigma="0.4"
+           length="5.0" minGap="2.5"
+           maxSpeed="36.11"
+           vClass="passenger"
+           color="0,0,200">
+        <param key="bw_demand"  value="0.0180"/>
+        <param key="is_ho"      value="1"/>
+        <param key="flow_type"  value="HO_video"/>
+        <param key="mean_life"  value="12"/>
+    </vType>
+
+    <vType id="vt_ho_data"
+           accel="2.8" decel="4.5" sigma="0.4"
+           length="5.0" minGap="2.5"
+           maxSpeed="36.11"
+           vClass="passenger"
+           color="0,100,200">
+        <param key="bw_demand"  value="0.0120"/>
+        <param key="is_ho"      value="1"/>
+        <param key="flow_type"  value="HO_data"/>
+        <param key="mean_life"  value="8"/>
+    </vType>
+
+    <!-- Non-handover vehicles (is_ho = False) -->
+
+    <vType id="vt_nc_video"
+           accel="2.5" decel="4.5" sigma="0.5"
+           length="5.0" minGap="2.5"
+           maxSpeed="33.33"
+           vClass="passenger"
+           color="200,100,0">
+        <param key="bw_demand"  value="0.0150"/>
+        <param key="is_ho"      value="0"/>
+        <param key="flow_type"  value="NC_video"/>
+        <param key="mean_life"  value="10"/>
+    </vType>
+
+    <vType id="vt_nc_voip"
+           accel="2.5" decel="4.5" sigma="0.5"
+           length="4.5" minGap="2.0"
+           maxSpeed="33.33"
+           vClass="passenger"
+           color="150,150,0">
+        <param key="bw_demand"  value="0.0060"/>
+        <param key="is_ho"      value="0"/>
+        <param key="flow_type"  value="NC_voip"/>
+        <param key="mean_life"  value="15"/>
+    </vType>
+
+    <vType id="vt_nc_be"
+           accel="2.2" decel="4.5" sigma="0.6"
+           length="4.5" minGap="2.0"
+           maxSpeed="30.00"
+           vClass="passenger"
+           color="100,100,100">
+        <param key="bw_demand"  value="0.0040"/>
+        <param key="is_ho"      value="0"/>
+        <param key="flow_type"  value="NC_best_effort"/>
+        <param key="mean_life"  value="6"/>
+    </vType>
+
+</additional>
